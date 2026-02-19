@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio de création Digital et Print</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Polices */
+    @font-face {
+      font-family: 'Danielbk';
+      src: url('fonts/danielbk.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Helvetica';
+      src: url('fonts/HELVETICA.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'HelveticaBold';
+      src: url('fonts/HELVETICA-BOLD-FONT.ttf') format('truetype');
+    }
+
+    @layer utilities {
+      .font-danielbk { font-family: 'Danielbk', sans-serif; }
+      .font-helvetica { font-family: 'Helvetica', sans-serif; }
+      .font-helveticabold { font-family: 'HelveticaBold', sans-serif; }
+    }
+
+    /* Nav link animation */
+    .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: #FF6D32;
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #FF6D32;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-50 min-h-screen flex flex-col">
+  
+<header class="fixed top-0 left-0 w-full z-50">
+<nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
+  <div class="relative w-full flex items-center p-4">
+
+    <!-- Logo LEFT -->
+    <a href="accueil.html" class="absolute left-4 md:left-8">
+      <img src="img/LOGO-SITE.svg" alt="Logo Mon Site" class="h-10 md:h-12 w-auto">
+    </a>
+
+    <!-- Menu DESKTOP CENTER -->
+    <div class="hidden md:flex mx-auto space-x-6 items-center">
+      <a href="accueil.html" class="nav-link">Accueil</a>
+      <a href="expertise.html" class="nav-link">Expertise</a>
+      <a href="projets.html" class="nav-link">Projets</a>
+      <a href="A_propos.html" class="nav-link">À propos</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Burger RIGHT -->
+    <button id="burgerBtn" class="ml-auto md:hidden flex flex-col space-y-1">
+      <span class="w-6 h-0.5 bg-gray-800"></span>
+      <span class="w-6 h-0.5 bg-gray-800"></span>
+      <span class="w-6 h-0.5 bg-gray-800"></span>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+      class="hidden absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center py-6 space-y-4 md:hidden">
+
+      <a href="accueil.html" class="nav-link">Accueil</a>
+      <a href="expertise.html" class="nav-link">Expertise</a>
+      <a href="projets.html" class="nav-link">Projets</a>
+      <a href="A_propos.html" class="nav-link">À propos</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+
+    </div>
+
+  </div>
+</nav>
+</header>
+
+<main class="flex-grow">
+
+  <!-- Hero -->
+  <section id="hero" class="relative bg-white text-black h-screen flex flex-col justify-center items-center text-center p-8">
+
+  <!-- Dégradé subtil derrière le texte -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white via-gray-100 to-white pointer-events-none"></div>
+
+  <h1 class="text-5xl md:text-6xl font-bold mb-9" data-aos="fade-up">
+    <span class="font-helveticabold">Je révèle les </span>
+    <span class="font-danielbk">voix</span>,<br>
+    <span class="font-helveticabold">raconte les </span>
+    <span class="font-danielbk">histoires</span>.
+  </h1>
+    <p class="text-xl md:text-1xl mb-20 leading-[1.6] md:leading-[1.6]" data-aos="fade-up" data-aos-delay="200"><span class="text-[#FF6D32]">Studio de création</span> spécialisé en Réalisation, Direction Artistique et Motion Design,<br> 
+  j’accompagne les marques, institutions et projets culturels dans<br> la création de contenus visuels et narratifs à forte identité.</p>
+
+    <a href="projets.html" class="relative z-10 border-2 border-[#FF6D32] text-[#FF6D32] text-[17px] px-12 py-2.5 rounded-full font-helvetica hover:bg-[#FF6D32] hover:text-white transition" data-aos="fade-up" data-aos-delay="400">Mes réalisations</a>
+
+
+<!-- Scroll indicator -->
+<a href="#section1"
+   class="absolute bottom-8 flex flex-col items-center text-gray-500 hover:text-[#FF6D32] transition"
+   aria-label="Scroller vers la suite">
+
+  <span class="text-sm mb-2 font-helvetica">Scroll</span>
+
+  <svg xmlns="http://www.w3.org/2000/svg"
+       class="w-5 h-5"
+       fill="none"
+       viewBox="0 0 24 24"
+       stroke="currentColor"
+       stroke-width="1.5">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+  </svg>
+</a>
+
+  </section>
+
+ <!-- Section 1 - Présentation finale -->
+<section id="section1" class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center px-6 sm:px-12 lg:px-32 xl:px-48 pt-[100px] lg:pt-[120px] pb-12 bg-white">
+
+  <!-- Texte -->
+  <div class="text text-center lg:text-left" data-aos="fade-right">
+    <!-- Titre -->
+    <div class="flex items-center justify-center lg:justify-start gap-2 mb-6">
+   <h2 class="font-danielbk leading-tight text-[clamp(3rem,5vw+1rem,9rem)]">
+  Studio<br>créatif
+</h2>
+
+    </div>
+
+    <!-- Paragraphe -->
+    <p class="font-helvetica text-lg sm:text-xl lg:text-xl mb-8 leading-[1.6] lg:leading-[1.7] max-w-2xl lg:max-w-4xl mx-auto lg:mx-0 text-justify">
+      Je suis <span class="text-[#FF6D32]">Servane Lenotte</span>, Directrice Artistique passionnée par l’image et le son, basée à Rennes. Je vous accompagne avec une vision claire : créer des <span class="text-[#FF6D32]">contenus graphiques</span> et <span class="text-[#FF6D32]">audiovisuels</span> qui font résonner à la fois les messages, les identités et les valeurs. C’est de cette recherche d’alignement qu’est né <span class="text-[#FF6D32]">Sens - le studio de création</span>.
+<br><br>Un nom choisi comme une <span class="text-[#FF6D32]">évidence</span> : le sens que l’on donne, le sens que l’on révèle, et le sens vers lequel on avance.
+      <br><br> À la croisée de la stratégie et de l’intuition, mon approche vise à <span class="text-[#FF6D32]">révéler</span> le potentiel des projets, à <span class="text-[#FF6D32]">affirmer</span> leur voix et à <span class="text-[#FF6D32]">construire</span> une communication graphique et audiovisuelle cohérente et responsable, tournée vers l’impact et l’utilité. Et cela, où que vous soyez !
+    </p>
+  </div>
+
+  <!-- Image avec dégradé derrière -->
+  <div class="relative flex justify-center items-center w-full h-full" data-aos="fade-left">
+
+     <!-- Image -->
+    <img src="img/Photo_SL5.png" alt="Studio créatif"
+      class="w-[80%] sm:w-[60%] md:w-[50%] lg:w-full h-auto max-h-[70vh] lg:max-h-[90vh] object-contain rounded-lg transform transition-transform duration-500 hover:-translate-y-4 hover:translate-x-2">
+  </div>
+
+</section>
+
+
+<!-- Section Expertises -->
+<section id="section2"class="relative bg-white py-36 px-8 overflow-hidden isolate">
+
+ <!-- Fond diffus avec fade vers le haut et le bas -->
+<div class="absolute inset-0 -z-10 pointer-events-none
+            [mask-image:linear-gradient(to_bottom,transparent_0%,black_20%,black_70%,transparent_100%)]">
+
+
+  <!-- Blob violet -->
+  <div class="absolute -top-96 left-1/4 w-[900px] h-[900px]
+              bg-[#7647b2] rounded-full blur-[200px] opacity-25">
+  </div>
+
+  <!-- Blob pêche -->
+  <div class="absolute top-1/4 -right-64 w-[900px] h-[900px]
+              bg-[#ff6d32] rounded-full blur-[220px] opacity-30">
+  </div>
+
+  <!-- Blob bleu -->
+  <div class="absolute bottom-0 left-1/3 w-[800px] h-[800px]
+              bg-[#9D4BA0] rounded-full blur-[200px] opacity-35">
+  </div>
+
+</div>
+
+  <!-- Contenu -->
+  <div class="relative max-w-7xl mx-auto text-center">
+
+    <!-- Phrase d'introduction -->
+    <h2 class="text-3xl md:text-4xl font-helveticabold mb-24">
+    <span class="font-helveticabold">Un accompagnement <span class="font-danielbk">sur-mesure</span>,<br> de l'idée à la diffusion.</span>
+
+    </h2>
+
+    <!-- Ligne du haut -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+
+      <!-- Création -->
+      <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-lg text-left
+       transition-all duration-500 ease-out
+       hover:-translate-y-3 hover:shadow-xl hover:bg-white/80">
+        <h3 class="font-danielbk text-2xl mb-4">Création</h3>
+        <p class="font-helvetica leading-relaxed">
+          Conception d’univers graphiques et audiovisuels. Chaque élément est pensé pour refléter l’identité et les valeurs du projet.
+        </p>
+      </div>
+
+      <!-- Production -->
+      <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-lg text-left
+       transition-all duration-500 ease-out
+       hover:-translate-y-3 hover:shadow-xl hover:bg-white/80">
+        <h3 class="font-danielbk text-2xl mb-4">Production</h3>
+        <p class="font-helvetica leading-relaxed">
+          Organisation et logistique globale. Je veille à ce que chaque projet se déroule de manière fluide et efficace.
+        </p>
+      </div>
+
+      <!-- Post-production -->
+      <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-lg text-left
+       transition-all duration-500 ease-out
+       hover:-translate-y-3 hover:shadow-xl hover:bg-white/80">
+        <h3 class="font-danielbk text-2xl mb-4">Post-production</h3>
+        <p class="font-helvetica leading-relaxed">
+          Derushage, montage et traitement des images et du son. Cette étape permet de structurer le projet et d’en révéler l’essentiel.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Ligne du bas -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto mb-24">
+
+      <!-- Motion Design -->
+      <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-lg text-left
+       transition-all duration-500 ease-out
+       hover:-translate-y-3 hover:shadow-xl hover:bg-white/80">
+        <h3 class="font-danielbk text-2xl mb-4">Motion Design</h3>
+        <p class="font-helvetica leading-relaxed">
+          Conception d'animations graphiques qui donnent vie au message pour rendre chaque communication plus vivante et impactante.
+        </p>
+      </div>
+
+      <!-- Coaching vocal -->
+      <div class="bg-white/70 backdrop-blur-md rounded-3xl p-8 shadow-lg text-left
+       transition-all duration-500 ease-out
+       hover:-translate-y-3 hover:shadow-xl hover:bg-white/80">
+        <h3 class="font-danielbk text-2xl mb-4">Coaching vocal</h3>
+        <p class="font-helvetica leading-relaxed">
+          Accompagnement pour poser la voix et gagner en présence. La voix est un outil de communication efficace et authentique.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Bouton -->
+    <a href="expertise.html"
+       class="inline-block border-2 border-[#FF6D32] text-[#FF6D32]
+              px-14 py-3 rounded-full font-helvetica
+              hover:bg-[#FF6D32] hover:text-white transition">
+      En savoir plus
+    </a>
+
+  </div>
+</section>
+
+<!-- Section Contact -->
+  <section id="homecontact" class="relative bg-white text-black h-screen flex flex-col justify-center items-center text-center p-8">
+
+  <!-- Dégradé subtil derrière le texte -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white via-gray-100 to-white pointer-events-none"></div>
+
+  <h1 class="text-5xl md:text-6xl font-bold mb-20" data-aos="fade-up">
+    <span class="font-helveticabold">Une </span>
+    <span class="font-danielbk">question</span>,
+    <span class="font-helveticabold">une</span>
+    <span class="font-danielbk">idée</span>,
+    <span class="font-helveticabold">un</span>
+    <span class="font-danielbk">projet</span> ?<br>
+    <span class="font-helveticabold">Échangeons.</span>
+  </h1>
+
+  <a href="contact.html" class="relative z-10 border-2 border-[#FF6D32] text-[#FF6D32] text-[17px] px-12 py-2.5 rounded-full font-helvetica hover:bg-[#FF6D32] hover:text-white transition" data-aos="fade-up" data-aos-delay="400">Contactez-moi</a>
+</section>
+
+ </main>
+
+  <!-- Footer -->
+<footer class="relative bg-white text-black py-4 overflow-hidden">
+
+  <!-- Halo doux en bas -->
+  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px]
+              bg-gradient-to-t from-[#E9E6FF]/70 via-[#FFE7DC]/40 to-transparent
+              blur-[140px] pointer-events-none">
+  </div>
+
+  <!-- Contenu -->
+  <div class="relative text-center text-sm text-gray-500">
+    <p>&copy; 2026 Servane Lenotte. Tous droits réservés.</p>
+  </div>
+
+</footer>
+
+  <!-- Initialisation AOS -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+
+    // Effet parallaxe simple
+    window.addEventListener('scroll', () => {
+      const parallaxElements = document.querySelectorAll('.parallax img');
+      parallaxElements.forEach(el => {
+        const offset = window.pageYOffset;
+        el.style.transform = `translateY(${offset * 0.2}px) scale(1.05)`;
+      });
+    });
+  </script>
+
+  <script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  burgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>
