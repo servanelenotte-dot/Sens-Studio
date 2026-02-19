@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Studio de création Digital et Print</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Polices */
+    @font-face {
+      font-family: 'Danielbk';
+      src: url('fonts/danielbk.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Helvetica';
+      src: url('fonts/HELVETICA.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'HelveticaBold';
+      src: url('fonts/HELVETICA-BOLD-FONT.ttf') format('truetype');
+    }
+
+    @layer utilities {
+      .font-danielbk { font-family: 'Danielbk', sans-serif; }
+      .font-helvetica { font-family: 'Helvetica', sans-serif; }
+      .font-helveticabold { font-family: 'HelveticaBold', sans-serif; }
+    }
+
+    /* Nav link animation */
+    .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: #FF6D32;
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #FF6D32;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-50 min-h-screen flex flex-col">
+  
+<header class="fixed top-0 left-0 w-full z-50">
+<nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
+  <div class="relative w-full flex items-center p-4">
+
+    <!-- Logo LEFT -->
+    <a href="accueil.html" class="absolute left-4 md:left-8">
+      <img src="img/LOGO-SITE.svg" alt="Logo Mon Site" class="h-10 md:h-12 w-auto">
+    </a>
+
+    <!-- Menu DESKTOP CENTER -->
+    <div class="hidden md:flex mx-auto space-x-6 items-center">
+      <a href="accueil.html" class="nav-link">Accueil</a>
+      <a href="expertise.html" class="nav-link">Expertise</a>
+      <a href="projets.html" class="nav-link">Projets</a>
+      <a href="A_propos.html" class="nav-link">À propos</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Burger RIGHT -->
+    <button id="burgerBtn" class="ml-auto md:hidden flex flex-col space-y-1">
+      <span class="w-6 h-0.5 bg-gray-800"></span>
+      <span class="w-6 h-0.5 bg-gray-800"></span>
+      <span class="w-6 h-0.5 bg-gray-800"></span>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+      class="hidden absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center py-6 space-y-4 md:hidden">
+
+     <a href="accueil.html" class="nav-link">Accueil</a>
+      <a href="expertise.html" class="nav-link">Expertise</a>
+      <a href="projets.html" class="nav-link">Projets</a>
+      <a href="A_propos.html" class="nav-link">À propos</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+
+    </div>
+
+  </div>
+</nav>
+</header>
+
+<main class="flex-grow">
+
+  <!-- Hero -->
+  <section id="hero" class="relative bg-white text-black h-screen flex flex-col justify-center items-center text-center p-8">
+
+  <!-- Dégradé subtil derrière le texte -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white via-gray-100 to-white pointer-events-none"></div>
+
+  <h1 class="text-3xl md:text-4xl font-bold mb-9" data-aos="fade-up">
+    <span class="font-helveticabold">Ici, les projets prennent la </span>
+    <span class="font-danielbk">parole</span>.
+  </h1>
+    <p class="text-xl md:text-1xl mb-20 leading-[1.6] md:leading-[1.6]" data-aos="fade-up" data-aos-delay="200">Identité visuelle, motion design, vidéo, branding, etc.<br>
+Découvrez une sélection de mes projets créés pour révéler des <span class="text-[#FF6D32]">identité</span> et faire émerger du <span class="text-[#FF6D32]">sens</span>.</p>
+
+
+<!-- Scroll indicator -->
+<a href="#section2"
+   class="absolute bottom-8 flex flex-col items-center text-gray-500 hover:text-[#FF6D32] transition"
+   aria-label="Scroller vers la suite">
+
+  <span class="text-sm mb-2 font-helvetica">Scroll</span>
+
+  <svg xmlns="http://www.w3.org/2000/svg"
+       class="w-5 h-5"
+       fill="none"
+       viewBox="0 0 24 24"
+       stroke="currentColor"
+       stroke-width="1.5">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+  </svg>
+</a>
+
+  </section>
+
+
+<!-- Section Réalisations -->
+<section id="section2"class="relative bg-white py-36 px-8 overflow-hidden isolate">
+
+ <!-- Fond diffus avec fade vers le haut et le bas -->
+<div class="absolute inset-0 -z-10 pointer-events-none
+            [mask-image:linear-gradient(to_bottom,transparent_0%,black_20%,black_70%,transparent_100%)]">
+
+
+  <!-- Blob violet -->
+  <div class="absolute -top-96 left-1/4 w-[900px] h-[900px]
+              bg-[#7647b2] rounded-full blur-[200px] opacity-25">
+  </div>
+
+  <!-- Blob pêche -->
+  <div class="absolute top-1/4 -right-64 w-[900px] h-[900px]
+              bg-[#c35bd8] rounded-full blur-[220px] opacity-35">
+  </div>
+
+  <!-- Blob bleu -->
+  <div class="absolute bottom-0 left-1/3 w-[800px] h-[800px]
+              bg-[#ff6d32] rounded-full blur-[200px] opacity-30">
+  </div>
+
+</div>
+
+<!-- Grille des projets -->
+<div class="relative max-w-7xl mx-auto">
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-10 gap-y-4 md:gap-y-8">
+
+    <!-- Projet 1 -->
+    <a href="#"
+       class="group relative aspect-square rounded-3xl overflow-hidden shadow-lg">
+
+      <img src="/img/projet-1.jpg"
+           alt="Projet Motion Design"
+           class="absolute inset-0 w-full h-full object-cover
+                  transition-transform duration-700 ease-out
+                  group-hover:scale-105">
+
+      <div class="absolute inset-0 bg-black/30 opacity-0
+                  transition-opacity duration-500
+                  group-hover:opacity-100"></div>
+
+      <div class="absolute inset-0 flex flex-col items-center justify-center
+                  text-white text-center px-6
+                  opacity-0 translate-y-4
+                  transition-all duration-500
+                  group-hover:opacity-100 group-hover:translate-y-0">
+
+        <h3 class="font-danielbk text-3xl mb-2">Titre 1</h3>
+        <p class="font-helvetica text-sm tracking-wide">Motion design</p>
+      </div>
+    </a>
+
+    <!-- Projet 2 (décalé) -->
+    <a href="#"
+       class="group relative aspect-square rounded-3xl overflow-hidden shadow-lg
+              md:mt-16">
+
+      <img src="/img/projet-2.jpg"
+           alt="Projet Illustration"
+           class="absolute inset-0 w-full h-full object-cover
+                  transition-transform duration-700 ease-out
+                  group-hover:scale-105">
+
+      <div class="absolute inset-0 bg-black/30 opacity-0
+                  transition-opacity duration-500
+                  group-hover:opacity-100"></div>
+
+      <div class="absolute inset-0 flex flex-col items-center justify-center
+                  text-white text-center px-6
+                  opacity-0 translate-y-4
+                  transition-all duration-500
+                  group-hover:opacity-100 group-hover:translate-y-0">
+
+        <h3 class="font-danielbk text-3xl mb-2">Titre 2</h3>
+        <p class="font-helvetica text-sm tracking-wide">Illustration</p>
+      </div>
+    </a>
+
+    <!-- Projet 3 -->
+    <a href="#"
+       class="group relative aspect-square rounded-3xl overflow-hidden shadow-lg">
+
+      <img src="/img/projet-3.jpg"
+           alt="Projet Motion Design"
+           class="absolute inset-0 w-full h-full object-cover
+                  transition-transform duration-700 ease-out
+                  group-hover:scale-105">
+
+      <div class="absolute inset-0 bg-black/30 opacity-0
+                  transition-opacity duration-500
+                  group-hover:opacity-100"></div>
+
+      <div class="absolute inset-0 flex flex-col items-center justify-center
+                  text-white text-center px-6
+                  opacity-0 translate-y-4
+                  transition-all duration-500
+                  group-hover:opacity-100 group-hover:translate-y-0">
+
+        <h3 class="font-danielbk text-3xl mb-2">Titre 3</h3>
+        <p class="font-helvetica text-sm tracking-wide">Motion design</p>
+      </div>
+    </a>
+
+    <!-- Projet 4 -->
+    <a href="#"
+       class="group relative aspect-square rounded-3xl overflow-hidden shadow-lg">
+
+      <img src="/img/projet-4.jpg"
+           alt="Projet Illustration"
+           class="absolute inset-0 w-full h-full object-cover
+                  transition-transform duration-700 ease-out
+                  group-hover:scale-105">
+
+      <div class="absolute inset-0 bg-black/30 opacity-0
+                  transition-opacity duration-500
+                  group-hover:opacity-100"></div>
+
+      <div class="absolute inset-0 flex flex-col items-center justify-center
+                  text-white text-center px-6
+                  opacity-0 translate-y-4
+                  transition-all duration-500
+                  group-hover:opacity-100 group-hover:translate-y-0">
+
+        <h3 class="font-danielbk text-3xl mb-2">Titre 4</h3>
+        <p class="font-helvetica text-sm tracking-wide">Illustration</p>
+      </div>
+    </a>
+
+    <!-- Projet 5 (décalé) -->
+    <a href="#"
+       class="group relative aspect-square rounded-3xl overflow-hidden shadow-lg
+              md:mt-16">
+
+      <img src="/img/projet-5.jpg"
+           alt="Projet Motion Design"
+           class="absolute inset-0 w-full h-full object-cover
+                  transition-transform duration-700 ease-out
+                  group-hover:scale-105">
+
+      <div class="absolute inset-0 bg-black/30 opacity-0
+                  transition-opacity duration-500
+                  group-hover:opacity-100"></div>
+
+      <div class="absolute inset-0 flex flex-col items-center justify-center
+                  text-white text-center px-6
+                  opacity-0 translate-y-4
+                  transition-all duration-500
+                  group-hover:opacity-100 group-hover:translate-y-0">
+
+        <h3 class="font-danielbk text-3xl mb-2">Titre 5</h3>
+        <p class="font-helvetica text-sm tracking-wide">Motion design</p>
+      </div>
+    </a>
+
+    <!-- Projet 6 -->
+    <a href="#"
+       class="group relative aspect-square rounded-3xl overflow-hidden shadow-lg">
+
+      <img src="/img/projet-6.jpg"
+           alt="Projet Illustration"
+           class="absolute inset-0 w-full h-full object-cover
+                  transition-transform duration-700 ease-out
+                  group-hover:scale-105">
+
+      <div class="absolute inset-0 bg-black/30 opacity-0
+                  transition-opacity duration-500
+                  group-hover:opacity-100"></div>
+
+      <div class="absolute inset-0 flex flex-col items-center justify-center
+                  text-white text-center px-6
+                  opacity-0 translate-y-4
+                  transition-all duration-500
+                  group-hover:opacity-100 group-hover:translate-y-0">
+
+        <h3 class="font-danielbk text-3xl mb-2">Titre 6</h3>
+        <p class="font-helvetica text-sm tracking-wide">Illustration</p>
+      </div>
+    </a>
+
+  </div>
+</div>
+</section>
+
+<!-- Section Contact -->
+  <section id="homecontact" class="relative bg-white text-black h-screen flex flex-col justify-center items-center text-center p-8">
+
+  <!-- Dégradé subtil derrière le texte -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white via-gray-100 to-white pointer-events-none"></div>
+
+  <h1 class="text-5xl md:text-6xl font-bold mb-20" data-aos="fade-up">
+    <span class="font-helveticabold">Une </span>
+    <span class="font-danielbk">question</span>,
+    <span class="font-helveticabold">une</span>
+    <span class="font-danielbk">idée</span>,
+    <span class="font-helveticabold">un</span>
+    <span class="font-danielbk">projet</span> ?<br>
+    <span class="font-helveticabold">Échangeons.</span>
+  </h1>
+
+  <a href="contact.html" class="relative z-10 border-2 border-[#FF6D32] text-[#FF6D32] text-[17px] px-12 py-2.5 rounded-full font-helvetica hover:bg-[#FF6D32] hover:text-white transition" data-aos="fade-up" data-aos-delay="400">Contactez-moi</a>
+</section>
+
+   </main>
+
+  <!-- Footer -->
+<footer class="relative bg-white text-black py-4 overflow-hidden">
+
+  <!-- Halo doux en bas -->
+  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px]
+              bg-gradient-to-t from-[#E9E6FF]/70 via-[#FFE7DC]/40 to-transparent
+              blur-[140px] pointer-events-none">
+  </div>
+
+  <!-- Contenu -->
+  <div class="relative text-center text-sm text-gray-500">
+    <p>&copy; 2026 Servane Lenotte. Tous droits réservés.</p>
+  </div>
+
+</footer>
+
+  <!-- Initialisation AOS -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+
+    // Effet parallaxe simple
+    window.addEventListener('scroll', () => {
+      const parallaxElements = document.querySelectorAll('.parallax img');
+      parallaxElements.forEach(el => {
+        const offset = window.pageYOffset;
+        el.style.transform = `translateY(${offset * 0.2}px) scale(1.05)`;
+      });
+    });
+  </script>
+
+  <script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  burgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>
