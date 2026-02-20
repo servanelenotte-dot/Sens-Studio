@@ -169,7 +169,7 @@
         • • •
       </div>
       <img src="img/email.svg" alt="Email" class="w-6 h-6">
-      <p class="font-helvetica leading-relaxed">contact@sens-studio.com</p>
+      <p class="font-helvetica leading-relaxed">contact@sens-lestudio.com</p>
     </div>
 
     <!-- Réseaux sociaux -->
@@ -197,18 +197,19 @@
 
 
     <!-- Colonne droite -->
-<form class="bg-white/70 backdrop-blur-xl rounded-3xl p-10 shadow-sm space-y-10">
-
+<form class="bg-white/70 backdrop-blur-xl rounded-3xl p-10 shadow-sm space-y-10" action="https://api.web3forms.com/submit" method="POST" >
   <div class="grid md:grid-cols-2 gap-8">
     <input type="text" placeholder="Nom" class="border-2 border-[#FF6D32] rounded-lg px-4 py-4 bg-transparent focus:outline-none">
     <input type="text" placeholder="Prénom" class="border-2 border-[#FF6D32] rounded-lg px-4 py-4 bg-transparent focus:outline-none">
   </div>
 
-  <input type="email" placeholder="E-mail" class="w-full border-2 border-[#FF6D32] rounded-lg px-4 py-4 bg-transparent focus:outline-none">
-
+  <input type="email" name="email" placeholder="E-mail" class="w-full border-2 border-[#FF6D32] rounded-lg px-4 py-4 bg-transparent focus:outline-none">
+  
+  <input type="hidden" name="access_key" value="92c25634-9aed-4946-8271-869b560c51df">
+  
   <input type="tel" placeholder="Téléphone" class="w-full border-2 border-[#FF6D32] rounded-lg px-4 py-4 bg-transparent focus:outline-none">
 
-  <textarea rows="5" placeholder="Message" class="w-full border-2 border-[#FF6D32] rounded-lg px-4 py-4 bg-transparent focus:outline-none"></textarea>
+  <textarea rows="5" placeholder="Message" name="message class="w-full border-2 border-[#FF6D32] rounded-lg px-4 py-4 bg-transparent focus:outline-none"></textarea>
 
   <div class="flex justify-end">
     <button type="submit" class="border-2 border-[#FF6D32] text-[#FF6D32] px-10 py-3 rounded-lg hover:bg-[#FF6D32] hover:text-white transition">
@@ -412,3 +413,4 @@ Il dépend du type de sujet, de son ampleur et des besoins spécifiques qu’il 
 </body>
 
 </html>
+
