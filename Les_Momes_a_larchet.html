@@ -164,56 +164,32 @@
   <!-- ====== INTRO ====== -->
   <div class="max-w-5xl mx-auto text-center pt-8 pb-6 px-8"> <!-- <-- pt haut conservé, pb réduit -->
     <h1 class="text-3xl md:text-4xl font-bold mb-0" data-aos="fade-up"> <!-- <-- mb réduit à 0 -->
-      <span class="font-danielbk">Titre 1</span>
+      <span class="font-danielbk">Les Mômes à l'Archet</span>
     </h1>
   </div>
 
-  <!-- ====== RÉALISATION VIDÉO ====== -->
-  <section class="relative min-h-auto flex flex-col items-center text-center pt-8 md:pt-12 px-8"> <!-- <-- pt top réduit -->
-    
-    <!-- Background flou / dégradé -->
-    <div class="absolute inset-0 bg-gradient-to-br from-pink-100/70 via-purple-100/70 to-orange-100/70 blur-3xl -z-0"></div>
+  <!-- ====== RÉALISATION PHOTOS ====== -->
+<section class="relative min-h-auto flex flex-col items-center text-center pt-8 md:pt-12 px-8">
 
-  <!-- Vidéo personnalisée -->
-<div class="w-full max-w-4xl relative z-10">
-  <div class="relative pb-[56.25%]"> <!-- 16:9 ratio -->
+  <!-- Background flou / dégradé -->
+  <div class="absolute inset-0 bg-gradient-to-br from-pink-100/70 via-purple-100/70 to-orange-100/70 blur-3xl -z-0"></div>
 
-    <!-- Vignette avec bouton play -->
-    <div id="video-placeholder" class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg overflow-hidden cursor-pointer">
-      <img src="img/projet-1.jpg" alt="Vignette vidéo" class="w-full h-full object-cover">
-      
-      <!-- Bouton play centré -->
-      <div class="absolute inset-0 flex items-center justify-center">
-        <div class="w-16 h-16 bg-[#FF6D32] rounded-full flex items-center justify-center shadow-lg">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M4 2v20l18-10L4 2z"/>
-          </svg>
-        </div>
-      </div>
+  <!-- Galerie d'images -->
+  <div class="w-full max-w-4xl relative z-10 grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="rounded-lg overflow-hidden shadow-lg">
+      <img src="img/LOGO-COULEURS.png" alt="Photo 1" class="w-full h-full object-cover">
     </div>
-
+    <div class="rounded-lg overflow-hidden shadow-lg">
+      <img src="img/Les-mômes-visuel7-carre.png" alt="Photo 2" class="w-full h-full object-cover">
+    </div>
+    <div class="rounded-lg overflow-hidden shadow-lg md:col-span-2">
+      <img src="img/Les-mômes-visuel7-HD.png" alt="Photo 3" class="w-full h-full object-cover">
+    </div>
   </div>
-</div>
-
-<script>
-  // Au clic, on remplace l'image par l'iframe
-  document.getElementById('video-placeholder').addEventListener('click', function() {
-    this.innerHTML = `
-      <iframe
-        class="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
-        src="https://www.youtube.com/embed/Ps15VRVKMJc?autoplay=1"
-        title="Lecteur vidéo YouTube"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    `;
-  });
-</script>
 
   <!-- Texte sous la vidéo -->
 <div class="px-6 mt-4 pb-6 text-center text-black font-helveticabold relative z-10">
-  Client : <span class="font-helvetica">klaxoon</span> &nbsp;|&nbsp; Année : <span class="font-helvetica">2023</span>
+  Client : <span class="font-helvetica">Les Mômes à l'Archet</span> &nbsp;|&nbsp; Année : <span class="font-helvetica">2026</span>
 </div>
 
 <!-- Ligne orange fine personnalisée -->
@@ -221,12 +197,11 @@
 
 <!-- Nouveau paragraphe avec espacement responsive -->
 <div class="px-6 text-justify text-black font-helvetica mt-6 md:mt-12 max-w-4xl mx-auto relative z-10">
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<br><br>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<br><br>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.<br><br>
-  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea
+  <span class="text-[#FF6D32]">Les Mômes à l’Archet</span> est une association musicale spécialisée dans les instruments à cordes et dédiée à la transmission et à la pratique de la musique. Avant ce projet, elle ne disposait pas d’identité visuelle claire, ce qui limitait sa visibilité et la cohérence de sa communication auprès de ses membres et du public.
+  <br><br>
+ L’objectif était de <span class="text-[#FF6D32]">créer une identité visuelle complète et cohérente</span>, capable de refléter l’univers musical et collectif de l’association. Le projet devait permettre à l’association de se présenter de manière reconnaissable, moderne et harmonieuse, tout en traduisant l’esprit artistique et collaboratif de ses musiciens.
+<br><br>
+Le studio Sens a pris en charge <span class="text-[#FF6D32]">la création de la charte graphique</span> dans son intégralité : conception du logo, choix de la typographie, palette de couleurs, textures et éléments graphiques. Chaque élément a été pensé pour être à la fois distinctif, esthétique et fonctionnel, afin de donner à l’association une identité visuelle forte et facilement déclinable sur tous ses supports. 
 </div>
 
   </section>
