@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sens est un studio de création spécialisé dans la Direction Artistique, le Motion Design, la Réalisation et et le Coaching vocal. J'accompagne marques, institutions et particuliers à Rennes et partout en France.">
+  <title>Studio de création Digital et Print</title>
+
+   <!-- Favicon principal -->
+  <link rel="icon" type="image/svg" href="img/LOGO-SITE.svg">
+  
+  <!-- Optionnel : pour Apple/iOS -->
+  <link rel="apple-touch-icon" href="img/LOGO-SITE.svg">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Polices */
+    @font-face {
+      font-family: 'Danielbk';
+      src: url('fonts/danielbk.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'Helvetica';
+      src: url('fonts/HELVETICA.ttf') format('truetype');
+    }
+
+    @font-face {
+      font-family: 'HelveticaBold';
+      src: url('fonts/HELVETICA-BOLD-FONT.ttf') format('truetype');
+    }
+
+    @layer utilities {
+      .font-danielbk { font-family: 'Danielbk', sans-serif; }
+      .font-helvetica { font-family: 'Helvetica', sans-serif; }
+      .font-helveticabold { font-family: 'HelveticaBold', sans-serif; }
+    }
+
+    /* Nav link animation */
+    .nav-link {
+      position: relative;
+      transition: color 0.3s;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: #FF6D32;
+      transition: width 0.3s;
+    }
+
+    .nav-link:hover {
+      color: #FF6D32;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-link.active {
+      color: #FF6D32;
+    }
+    .nav-link.active::after {
+      width: 100%;
+    }
+ 
+    /* Ligne de tarif */
+    .price-row {
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .price-row:last-child {
+      border-bottom: none;
+    }
+
+  </style>
+</head>
+
+<body class="font-sans bg-gray-50 min-h-screen flex flex-col">
+  
+<header class="fixed top-0 left-0 w-full z-50">
+<nav class="fixed top-0 left-0 w-full bg-white shadow z-50">
+  <div class="relative w-full flex items-center p-4">
+
+    <!-- Logo LEFT -->
+    <a href="index.html" class="absolute left-4 md:left-8">
+      <img src="img/LOGO-SITE.svg" alt="Logo Mon Site" class="h-10 md:h-12 w-auto">
+    </a>
+
+    <!-- Menu DESKTOP CENTER -->
+    <div class="hidden md:flex mx-auto space-x-6 items-center">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="tarifs.html" class="nav-link">Tarifs</a>
+      <a href="A_propos.html" class="nav-link">À propos</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Burger RIGHT -->
+    <button id="burgerBtn" class="ml-auto md:hidden flex flex-col space-y-1">
+      <span class="w-6 h-0.5 bg-gray-800"></span>
+      <span class="w-6 h-0.5 bg-gray-800"></span>
+      <span class="w-6 h-0.5 bg-gray-800"></span>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu"
+      class="hidden absolute top-full left-0 w-full bg-white shadow-md flex flex-col items-center py-6 space-y-4 md:hidden">
+
+     <a href="index.html" class="nav-link">Accueil</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="tarifs.html" class="nav-link">Tarifs</a>
+      <a href="A_propos.html" class="nav-link">À propos</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+
+    </div>
+
+  </div>
+</nav>
+</header>
+
+<main class="flex-grow">
+
+  <!-- Hero -->
+  <section id="hero" class="relative bg-white text-black min-h-screen flex flex-col items-center text-center px-6 md:px-8 py-6
+                justify-center md:justify-center lg:justify-center">
+
+  <!-- Dégradé subtil derrière le texte -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white via-gray-100 to-white pointer-events-none"></div>
+
+  <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-9" data-aos="fade-up">
+    <span class="font-helveticabold">Un accompagnement</span>
+    <span class="font-danielbk">sur-mesure</span>.
+  </h1>
+    <p class="text-base sm:text-lg md:text-xl mb-12 md:mb-20 leading-relaxed max-w-2xl" data-aos="fade-up" data-aos-delay="200">Chaque accompagnement s'adapte à vos <span class="text-[#FF6D32]">besoins</span>, 
+      votre <span class="text-[#FF6D32]">rythme</span> et vos <span class="text-[#FF6D32]">objectifs</span>. Voici l'ensemble de <span class="text-[#FF6D32]">mes formules</span>, à l'unité ou en forfait, pour vous permettre d'y voir clair et de choisir ce qui vous correspond le mieux.</p>
+
+
+<!-- Scroll indicator -->
+  <a href="#tarifs"
+     class="absolute bottom-4 sm:bottom-6 md:bottom-8 lg:bottom-12 flex flex-col items-center text-gray-500 hover:text-[#FF6D32] transition z-10 animate-bounce-slow"
+     aria-label="Scroller vers la suite">
+
+    <span class="text-xs sm:text-sm mb-1 sm:mb-2 font-helvetica tracking-wide">
+      Scroll
+    </span>
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         class="w-4 h-4 sm:w-5 sm:h-5"
+         fill="none"
+         viewBox="0 0 24 24"
+         stroke="currentColor"
+         stroke-width="1.5">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </a>
+
+  </section>
+
+
+<!-- Section Tarifs -->
+  <section id="tarifs" class="relative bg-white py-20 px-6 md:px-8 overflow-hidden isolate">
+ 
+    <!-- Fond diffus, dans l'esprit de la section Réalisations -->
+    <div class="absolute inset-0 -z-10 pointer-events-none
+                [mask-image:linear-gradient(to_bottom,transparent_0%,black_20%,black_70%,transparent_100%)]">
+      <div class="absolute -top-64 left-1/4 w-[800px] h-[800px] bg-[#7647b2] rounded-full blur-[220px] opacity-15"></div>
+      <div class="absolute top-1/3 -right-64 w-[800px] h-[800px] bg-[#c35bd8] rounded-full blur-[220px] opacity-15"></div>
+      <div class="absolute bottom-0 left-1/3 w-[700px] h-[700px] bg-[#ff6d32] rounded-full blur-[200px] opacity-15"></div>
+    </div>
+ 
+    <div class="relative max-w-3xl mx-auto space-y-24">
+ 
+      <!-- COACHING VOCAL -->
+      <div data-aos="fade-up">
+        <div class="text-center relative z-10">
+          <h2 class="font-danielbk text-3xl md:text-4xl text-[#000000]">
+            Coaching vocal
+          </h2>
+        </div>
+        <p class="text-center font-helvetica text-sm text-gray-500 italic mt-6 mb-6">
+          Chanteur·euses amateur·rices aux pros
+        </p>
+        <p class="text-center mb-6">
+          <span class="inline-block bg-[#FF6D32]/10 text-[#FF6D32] font-helveticabold text-xs md:text-sm tracking-wide px-4 py-1.5 rounded-full">
+            1<sup>re</sup> heure offerte
+          </span>
+        </p>
+ 
+        <div class="bg-white border border-gray-200 rounded-3xl shadow-lg px-6 md:px-10 py-8">
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">Séance à l'unité</p>
+              <p class="font-helvetica text-xs text-gray-400">1h</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">50 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">Séance à l'unité</p>
+              <p class="font-helvetica text-xs text-gray-400">2h</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">80 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">Forfait 5 séances</p>
+              <p class="font-helvetica text-xs text-gray-400">1h / séance</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">250 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">Forfait 5 séances</p>
+              <p class="font-helvetica text-xs text-gray-400">2h / séance</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">400 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">
+                Forfait 10 séances
+                <span class="ml-2 align-middle bg-[#FF6D32]/10 text-[#FF6D32] text-[10px] font-helveticabold uppercase tracking-wide px-2 py-1 rounded-full">Le plus complet</span>
+              </p>
+              <p class="font-helvetica text-xs text-gray-400">1h / séance</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">400 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">
+                Forfait 10 séances
+                <span class="ml-2 align-middle bg-[#FF6D32]/10 text-[#FF6D32] text-[10px] font-helveticabold uppercase tracking-wide px-2 py-1 rounded-full">Le plus complet</span>
+              </p>
+              <p class="font-helvetica text-xs text-gray-400">2h / séance</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">700 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">Forfait studio</p>
+              <p class="font-helvetica text-xs text-gray-400">Demi-journée</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">150 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">Forfait studio</p>
+              <p class="font-helvetica text-xs text-gray-400">Journée complète</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">300 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">Cours collectifs</p>
+              <p class="font-helvetica text-xs text-gray-400">Sur devis</p>
+            </div>
+            <p class="font-helvetica text-sm text-[#FF6D32] uppercase">Me contacter</p>
+          </div>
+ 
+        </div>
+      </div>
+ 
+      <!-- COACHING PRISE DE PAROLE -->
+     <div data-aos="fade-up">
+        <div class="text-center relative z-10">
+          <h2 class="font-danielbk text-3xl md:text-4xl text-[#000000]">
+            Coaching prise de parole
+          </h2>
+        </div>
+        <p class="text-center font-helvetica text-sm text-gray-500 italic mt-6 mb-6">
+          Entrepreneurs · Dirigeants · Managers
+        </p>
+
+         <p class="text-center mb-6">
+          <span class="inline-block bg-[#FF6D32]/10 text-[#FF6D32] font-helveticabold text-xs md:text-sm tracking-wide px-4 py-1.5 rounded-full">
+            1<sup>re</sup> heure offerte
+          </span>
+        </p>
+ 
+        <div class="bg-white border border-gray-200 rounded-3xl shadow-lg px-6 md:px-10 py-8">
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">Séance à l'unité</p>
+              <p class="font-helvetica text-xs text-gray-400">1h</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">100 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">Séance à l'unité</p>
+              <p class="font-helvetica text-xs text-gray-400">2h</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">180 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">Forfait 5 séances</p>
+              <p class="font-helvetica text-xs text-gray-400">1h / séance</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">450 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">Forfait 5 séances</p>
+              <p class="font-helvetica text-xs text-gray-400">2h / séance</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">900 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">
+                Forfait 10 séances
+                <span class="ml-2 align-middle bg-[#FF6D32]/10 text-[#FF6D32] text-[10px] font-helveticabold uppercase tracking-wide px-2 py-1 rounded-full">Le plus complet</span>
+              </p>
+              <p class="font-helvetica text-xs text-gray-400">1h / séance</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">900 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">
+                Forfait 10 séances
+                <span class="ml-2 align-middle bg-[#FF6D32]/10 text-[#FF6D32] text-[10px] font-helveticabold uppercase tracking-wide px-2 py-1 rounded-full">Le plus complet</span>
+              </p>
+              <p class="font-helvetica text-xs text-gray-400">2h / séance</p>
+            </div>
+            <p class="font-helvetica text-xl md:text-1xl text-[#FF6D32]">1 500 €</p>
+          </div>
+ 
+          <div class="price-row flex justify-between items-baseline py-3">
+            <div>
+              <p class="font-helvetica text-sm md:text-base">Cours collectifs</p>
+              <p class="font-helvetica text-xs text-gray-400">Sur devis</p>
+            </div>
+            <p class="font-helvetica text-sm text-[#FF6D32] uppercase">Me contacter</p>
+          </div>
+ 
+        </div>
+      </div>
+ 
+      <!-- DIRECTION ARTISTIQUE -->
+      <div data-aos="fade-up">
+        <div class="text-center relative z-10">
+          <h2 class="font-danielbk text-3xl md:text-4xl text-[#000000]">
+            Direction artistique
+          </h2>
+        </div>
+        <p class="text-center font-helvetica text-sm text-gray-500 italic mt-6 mb-6">
+          Particuliers · Professionnels
+        </p>
+ 
+        <div class="bg-white border border-gray-200 rounded-3xl shadow-lg px-6 md:px-10 py-10 text-center">
+          <p class="font-helvetica text-sm md:text-base text-gray-600 max-w-md mx-auto mb-6 leading-relaxed">
+            Chaque projet étant unique, la direction artistique fait l'objet d'un devis personnalisé, établi selon vos besoins, votre univers et l'ampleur du projet.
+          </p>
+          <a href="contact.html" class="inline-block border-2 border-[#FF6D32] text-[#FF6D32] text-sm md:text-[15px] px-8 py-2.5 rounded-full font-helvetica hover:bg-[#FF6D32] hover:text-white transition">
+            Demander un devis
+          </a>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+
+<!-- Section Contact -->
+  <section id="homecontact" class="relative bg-white text-black h-screen flex flex-col justify-center items-center text-center p-8">
+
+  <!-- Dégradé subtil derrière le texte -->
+  <div class="absolute inset-0 bg-gradient-to-b from-white via-gray-100 to-white pointer-events-none"></div>
+
+  <h1 class="text-5xl md:text-6xl font-bold mb-20" data-aos="fade-up">
+    <span class="font-helveticabold">Une </span>
+    <span class="font-danielbk">question</span>,
+    <span class="font-helveticabold">une</span>
+    <span class="font-danielbk">idée</span>,
+    <span class="font-helveticabold">un</span>
+    <span class="font-danielbk">projet</span> ?<br>
+    <span class="font-helveticabold">Échangeons.</span>
+  </h1>
+
+  <a href="contact.html" class="relative z-10 border-2 border-[#FF6D32] text-[#FF6D32] text-[17px] px-12 py-2.5 rounded-full font-helvetica hover:bg-[#FF6D32] hover:text-white transition" data-aos="fade-up" data-aos-delay="400">Contactez-moi</a>
+</section>
+
+   </main>
+
+  <!-- Footer -->
+<footer class="relative bg-white text-black py-4 overflow-hidden">
+
+  <!-- Halo doux en bas -->
+  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1200px] h-[600px]
+              bg-gradient-to-t from-[#E9E6FF]/70 via-[#FFE7DC]/40 to-transparent
+              blur-[140px] pointer-events-none">
+  </div>
+
+  <!-- Contenu -->
+  <div class="relative text-center text-sm text-gray-500">
+    <p>&copy; 2026 Servane Lenotte. Tous droits réservés.</p>
+  </div>
+
+</footer>
+
+  <!-- Initialisation AOS -->
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: true,
+    });
+
+    // Effet parallaxe simple
+    window.addEventListener('scroll', () => {
+      const parallaxElements = document.querySelectorAll('.parallax img');
+      parallaxElements.forEach(el => {
+        const offset = window.pageYOffset;
+        el.style.transform = `translateY(${offset * 0.2}px) scale(1.05)`;
+      });
+    });
+  </script>
+
+  <script>
+  const burgerBtn = document.getElementById('burgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  burgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+
+</html>
